@@ -1,1 +1,1 @@
-# WebCore-project-Petrushin-Maxim
+# WebCore_project
