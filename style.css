@@ -1,495 +1,326 @@
 body {
     font-family: 'TT Lakes', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-width: 320px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
     background-color: #F8F8F8;
+    height: 100vh;
 }
 
-@media (max-width: 320px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    .main-header__menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none;
-        height: 88px;
-        border-bottom: 1px solid #D9FFF5;
-        background-color: #FFFFFF
-    }
-
-
-    .main-header__menu-divider {
-        margin: auto 20px;
-    }
-
-    .main-header__menu-item:first-child {
-        margin-left: 16px;
-    }
-    .main-header__menu-item:last-child {
-        margin-right: 16px;
-    }
-
-    .main-header__menu-item {
-        margin-right: 16px;
-    }
-    .main-header__logo {
-        height: 51px;
-        margin: auto;
-    }
-
-    .main-header__menu-item > button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        background-color: #FF3E79;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-    }
-
-    .main-header__menu-item--mobile-hidden {
-        display: none;
-    }
-
-    .main-section__txt--mobile-hidden {
-        display: none;
-    }
-
-    .main-header__button-description--wide-screen-visible {
-        display: none;
-    }
-
-    .main-header__title-container {
-        display: flex;
-        justify-content: flex-start;
-        padding-top: 24px;
-    }
-
-    .main-header__pre-title {
-        height: 40px;
-        margin-right: 12px;
-    }
-
-    .main-header__title {
-        font-size: 28px;
-        font-weight: bold;
-        font-style: normal;
-    }
-
-    .main-section {
-        height: 100vh;
-    }
-
-    .main-section__navigation-list {
-        display: flex;
-        align-items: flex-start;
-        width: 320px;
-        overflow-x: scroll;
-        list-style: none;
-        margin: 24px 0
-    }
-    .main-section__navigation-link {
-        display: inline-block;
-        padding: 8px 16px;
-        outline: none;
-        white-space: nowrap;
-        text-decoration: none;
-        border: 2px solid transparent;
-        color: #7E7E82;
-        font-family: "TT Lakes", sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        font-style: normal;
-    }
-
-    .main-section__navigation-item:first-child {
-        margin-left: 16px;
-    }
-
-    .main-section__navigation-link:hover {
-        border: 2px solid #B8FFEC;
-        border-radius: 6px;
-        background-color: #FFFFFF;
-    }
-
-    .main-section__resume-container {
-        width: 288px;
-        margin: 0 auto;
-    }
-
-    .main-section__txt {
-        font-family: "TT Lakes", sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        font-style: normal;
-        line-height: 18px;
-        letter-spacing: 0.2px;
-    }
-
-    .main-section__read-more {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        font-family: "TT Lakes", sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        font-style: normal;
-        height: 24px;
-        margin-top: 16px;
-    }
-
-    .main-section__read-more-link {
-        outline: none;
-        text-decoration: none;
-        color: #1B1C21;
-    }
-
-    .main-section__img {
-        width: 100%;
-        margin-top: 16px;
-    }
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-@media (min-width: 321px) and (max-width: 768px) {
+.link-reset {
+    text-decoration: none;
+    color: inherit;
+}
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    .main-header__menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none;
-        height: 88px;
-        border-bottom: 1px solid #D9FFF5;
-        background-color: #FFFFFF
-    }
-
-    .main-header__menu-item {
-        margin-right: 16px;
-    }
-
-    .main-header__menu-divider {
-        margin: auto 20px;
-    }
-
-    .main-header__menu-item:first-child {
-        margin-left: 24px;
-        margin-right: 20px;
-    }
-    .main-header__menu-divider {
-        margin: 0;
-    }
-    .main-header__menu-item:last-child {
-        margin-right: 24px;
-    }
-
-    .main-header__menu-item:nth-child(3) {
-        flex-grow: 2;
-    }
-
-    .main-header__menu-item:nth-child(6) {
-        margin-right: 20px;
-    }
-
-    .main-header__menu-item:nth-child(7) {
-        margin-right: 20px;
-    }
-
-    .main-header__logo {
-        height: 51px;
-        margin: auto;
-        margin-left: 20px;
-    }
-
-    .main-header__menu-item > button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        background-color: #FF3E79;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-    }
-
-    .main-header__button-description--wide-screen-visible {
-        display: none;
-    }
-
-    .main-section {
-        height: 100vh;
-        background-color: #F8F8F8;
-    }
-
-    .main-header__title-container {
-        display: flex;
-        justify-content: flex-start;
-        padding-top: 24px;
-    }
-
-    .main-header__pre-title {
-        height: 40px;
-        margin-right: 20px;
-    }
-
-    .main-header__title {
-        font-size: 28px;
-        font-weight: bold;
-        font-style: normal;
-    }
-
-    .main-section__navigation-list {
-        display: flex;
-        align-items: flex-start;
-        width: 100vw;
-        overflow-x: scroll;
-        list-style: none;
-        margin: 24px 0
-    }
-    .main-section__navigation-link {
-        display: inline-block;
-        padding: 8px 16px;
-        height: 40px;
-        outline: none;
-        white-space: nowrap;
-        text-decoration: none;
-        color: #7E7E82;
-        font-family: "TT Lakes", sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        font-style: normal;
-        border: 2px solid transparent;
-        border-radius: 6px;
-    }
-
-    .main-section__navigation-item:first-child {
-        margin-left: 24px;
-    }
-
-    .main-section__navigation-item:last-child {
-        margin-right: 24px;
-    }
-
-    .main-section__navigation-link:hover {
-        border: 2px solid #B8FFEC;
-        border-radius: 6px;
-        background-color: #FFFFFF;
-        height: 40px;
-    }
-
-    .main-section__resume-container {
-        display: grid;
-        max-width: 720px;
-        margin: 32px 25px 40px 25px;
-        gap: 48px;
-        grid-template-columns: 1fr 360px;
-        height: 208px;
+.menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    height: 88px;
+    border-bottom: 1px solid #D9FFF5;
+    background-color: #FFFFFF
 
 }
 
-    .main-section__txt {
-        font-family: "TT Lakes", sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        font-style: normal;
-        line-height: 20px;
-        letter-spacing: 0.2px;
-    }
-    .main-section__txt--tablet-hidden {
-        display: none;
+.menu__divider {
+    display: none;
+}
+
+.logo {
+    height: 51px;
+    width: auto;
+}
+
+.menu__logo {
+    margin-right: auto;
+}
+
+.user-active {
+    display: flex;
+    gap: 16px;
+}
+
+.repair-active {
+    display: flex;
+    gap: 16px;
+}
+
+.button {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #FF3E79;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.button:hover {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.menu__user-active {
+    display: none;
+}
+
+.button--burger {
+    background-image: url("img/burger.svg ");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.button--call {
+    background-image: url("img/call.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.button--chat {
+    background-image: url("img/chat.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.button--profile {
+    background-image: url("img/profile.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.button--repair {
+    background-image: url("img/repair.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.button--check-status {
+    background-image: url("img/check-status.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.button:hover {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.button__description {
+    display: none;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.title::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 40px;
+    background-image: url("img/highlight.svg ");
+    background-repeat: no-repeat;
+    margin-right: 12px;
+}
+
+.header__title {
+    margin-top: 24px;
+}
+
+.navigation {
+    display: flex;
+}
+
+.main__navigation {
+    margin-top: 24px;
+    margin-left: 16px;
+}
+
+.navigation__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.navigation__link {
+    display: inline-block;
+    padding: 8px 16px;
+    height: 40px;
+    white-space: nowrap;
+    color: #7E7E82;
+    font-family: "TT Lakes", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    border: 2px solid transparent;
+    border-radius: 6px;
+}
+
+.navigation__link:hover {
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+}
+
+.resume {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-content {
+    font-family: "TT Lakes", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 20px;
+}
+
+.text-content--mobile-hidden {
+    display: none;
+}
+
+.resume__text-content {
+    margin: 24px 16px 16px 16px;
+}
+
+.read-more {
+    display: flex;
+    align-items: center;
+    font-family: "TT Lakes", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    height: 24px;
+}
+
+.read-more::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("img/expand.svg");
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+.read-more:hover {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.text-content__read-more {
+    margin-top: 16px;
+}
+
+.image {
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+
+    .user-active {
+        display: inherit;
     }
 
-    .main-section__txt--mobile-hidden {
+    .menu__divider {
+        display: inherit;
+    }
+
+    .text-content--mobile-hidden {
+        display: inherit;
         margin-top: 1em;
-        font-family: "TT Lakes", sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        font-style: normal;
-        line-height: 20px;
-        letter-spacing: 0.2px;
     }
 
-    .main-section__read-more {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        font-family: "TT Lakes", sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        font-style: normal;
-        height: 24px;
-        margin-top: 16px;
-    }
-
-    .main-section__read-more-link {
-        outline: none;
-        text-decoration: none;
-        color: #1B1C21;
-    }
-
-    .main-section__img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-@media (min-width: 769px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .main-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 42px;
-    }
-
-    .main-header__menu {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        list-style: none;
-    }
-
-    .main-header__menu-item {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin-right: 32px;
-    }
-
-    .main-header__button-description {
-        margin-right: 8px;
-    }
-
-    .main-header__menu-item--wide-screen-hidden {
+    .text-content--tablet-hidden {
         display: none;
     }
 
-    .main-header__menu-item > button {
+    .resume {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+    }
+
+    .main__resume {
+        margin: 32px 25px 40px 25px;
+    }
+
+    .resume__text-content {
+        margin: 0;
+    }
+}
+
+@media (min-width: 1120px) {
+
+    .button--burger {
+        display: none;
+    }
+
+    .user-active {
+        display: none;
+    }
+
+    .repair-active__item {
         display: flex;
-        justify-content: center;
         align-items: center;
-        border: none;
-        background-color: #FF3E79;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
+        justify-content: center;
+        gap: 8px;
     }
 
-    .main-section {
-        height: 100vh;
-        background-color: #F8F8F8;
+    .button__description {
+        display: inherit;
     }
 
-    .main-header__title-container {
+    .logo {
+        display: none;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .menu {
+        background-color: inherit;
+    }
+
+    .header {
         display: flex;
-        justify-content: flex-start;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    .header__title {
         order: -1;
     }
 
-    .main-header__pre-title {
-        height: 40px;
-        margin-right: 20px;
-    }
-
-    .main-header__title {
-        font-size: 28px;
-        font-weight: bold;
-        font-style: normal;
-    }
-
-    .main-section__navigation-list {
+    .navigation__list {
+        overflow-x: inherit;
         display: flex;
-        align-items: flex-start;
-        width: 100vw;
         flex-wrap: wrap;
-        list-style: none;
-        margin: 8px 25px 0 32px;
-    }
-    .main-section__navigation-link {
-        display: inline-block;
-        padding: 8px 16px;
-        height: 40px;
-        outline: none;
-        white-space: nowrap;
-        text-decoration: none;
-        color: #7E7E82;
-        font-family: "TT Lakes", sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        font-style: normal;
-        border: 2px solid transparent;
-        border-radius: 6px;
-    }
-
-
-    .main-section__navigation-link:hover {
-        border: 2px solid #B8FFEC;
-        border-radius: 6px;
-        background-color: #FFFFFF;
-        height: 40px;
-    }
-
-    .main-section__resume-container {
-        display: grid;
-        max-width: 1120px;
-        margin: 8px 34px 0 34px;
-        gap: 36px;
-        grid-template-columns: 1fr 530px;
-
-    }
-
-    .main-section__txt {
-        font-family: "TT Lakes", sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        font-style: normal;
-        line-height: 20px;
-        letter-spacing: 0.2px;
-    }
-
-    .main-section__txt--mobile-hidden {
-        margin-top: 1em;
-        font-family: "TT Lakes", sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        font-style: normal;
-        line-height: 20px;
-        letter-spacing: 0.2px;
-    }
-
-    .main-section__read-more {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        font-family: "TT Lakes", sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        font-style: normal;
-        height: 24px;
-        margin-top: 16px;
-    }
-
-    .main-section__read-more-link {
-        outline: none;
-        text-decoration: none;
-        color: #1B1C21;
-    }
-
-    .main-section__img {
-        display: block;
-        max-width: 100%;
-        height: auto;
     }
 }

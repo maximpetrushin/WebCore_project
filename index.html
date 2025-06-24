@@ -9,122 +9,92 @@
     <meta name="description" content="">
     <meta name="author" content="Петрушин Максим">
     <title>CPS главная страница</title>
+    <link rel="icon" href="img/main-logo.svg">
     <link rel="stylesheet" href="fonts/TTLakes/stylesheet.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="main-header">
-        <div class="main-header__container container">
-            <ul class="main-header__menu">
-                <li class="main-header__menu-item main-header__menu-item--wide-screen-hidden">
-                    <button class="main-header__burger-button">
-                        <img src="img/burger.svg"  alt="hidden menu">
-                    </button>
-                </li>
-                <li class="main-header__menu-item main-header__menu-divider main-header__menu-item--mobile-hidden main-header__menu-item--wide-screen-hidden">
-                    <img src="img/divider.svg" alt="divider" class="divider">
-                </li>
-                <li class="main-header__menu-item main-header__logo main-header__menu-item--wide-screen-hidden">
-                    <img src="img/main-logo.svg" alt="main logo">
-                </li>
-                <li class="main-header__menu-item main-header__menu-item--mobile-hidden main-header__menu-item--wide-screen-hidden">
-                    <button class="main-header__call-button">
-                        <img src="img/call.svg"  alt="contacts">
-                    </button>
-                </li>
-                <li class="main-header__menu-item main-header__menu-item--mobile-hidden main-header__menu-item--wide-screen-hidden">
-                    <button class="main-header__chat-button">
-                        <img src="img/chat.svg"  alt="chat">
-                    </button>
-                </li>
-                <li class="main-header__menu-item main-header__menu-item--mobile-hidden main-header__menu-item--wide-screen-hidden">
-                    <button class="main-header__profile-button">
-                        <img src="img/profile.svg"  alt="profile">
-                    </button>
-                </li>
-                <li class="main-header__menu-item main-header__menu-divider main-header__menu-item--wide-screen-hidden">
-                    <img src="img/divider.svg" alt="divider" class="divider">
-                </li>
-                <li class="main-header__menu-item">
-                    <p class="main-header__button-description main-header__button-description--wide-screen-visible">Оставить заявку</p>
-                    <button class="main-header__repair-button">
-                        <img src="img/repair.svg"  alt="repair">
-                    </button>
-                </li>
-                <li class="main-header__menu-item">
-                    <p class="main-header__button-description main-header__button-description--wide-screen-visible">Статус ремонта</p>
-                    <button class="main-header__check-status-button">
-                        <img src="img/checkstatus.svg"  alt="check status">
-                    </button>
-                </li>
-            </ul>
-        </div>
-        <div class="main-header__title-container container">
-            <div class="main-header__pre-title">
-                <img src="img/highlight.svg" alt="pre-title">
+    <body>
+    <div class="container">
+        <aside class="header">
+            <div class="menu">
+                <button class="button button--burger"></button>
+                <img src="img/divider.svg" alt="" class="divider menu__divider">
+                <img src="img/main-logo.svg" alt="logo" class="logo menu__logo">
+                <ul class="user-active list-reset menu__user-active">
+                    <li class="user-active__item">
+                        <button class="button button--call"></button>
+                    </li>
+                    <li class="user-active__item">
+                        <button class="button button--chat"></button>
+                    </li>
+                    <li class="user-active__item">
+                        <button class="button button--profile"></button>
+                    </li>
+                </ul>
+                <img src="img/divider.svg" alt="" class="divider">
+                <ul class="repair-active list-reset">
+                    <li class="repair-active__item">
+                        <p class="button__description">Оставить заявку</p>
+                        <button class="button button--repair"></button>
+                    </li>
+                    <li class="repair-active__item">
+                        <p class="button__description">Статус ремонта</p>
+                        <button class="button button--check-status"></button>
+                    </li>
+                </ul>
             </div>
-            <h1 class="main-header__title">Услуги и сервисы</h1>
-        </div>
-    </header>
-    <main class="main-section">
-        <div class="main-section__container">
-            <nav class="main-section__navigation">
-                <ul class="main-section__navigation-list">
-                    <li class="main-section__navigation-item">
-                        <a href="#" class="main-section__navigation-link">
+            <h1 class="title header__title">Услуги и сервисы</h1>
+        </aside>
+        <main class="main">
+            <nav class="navigation main__navigation">
+                <ul class="navigation__list list-reset">
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link link-reset">
                             Ремонтируемые бренды
                         </a>
                     </li>
-                    <li class="main-section__navigation-item">
-                        <a href="#" class="main-section__navigation-link">
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link link-reset">
                             Ремонтируемые устройства
                         </a>
                     </li>
-                    <li class="main-section__navigation-item">
-                        <a href="#" class="main-section__navigation-link">
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link link-reset">
                             Цены на услуги
                         </a>
                     </li>
-                    <li class="main-section__navigation-item">
-                        <a href="#" class="main-section__navigation-link">
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link link-reset">
                             Адреса сервисных центров
                         </a>
                     </li>
-                    <li class="main-section__navigation-item">
-                        <a href="#" class="main-section__navigation-link">
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link link-reset">
                             Специальные цены
                         </a>
                     </li>
-                    <li class="main-section__navigation-item">
-                        <a href="#" class="main-section__navigation-link">
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link link-reset">
                             Отзывы
                         </a>
                     </li>
                 </ul>
             </nav>
-
-            <article class="main-section__resume">
-                <div class="main-section__resume-container">
-                    <div class="main-section__txt-container">
-                        <p class="main-section__txt">
-                            Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-                        </p>
-                        <p class="main-section__txt--mobile-hidden">
-                            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="main-section__txt--tablet-hidden">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span>
-                        </p>
-                        <div class="main-section__read-more">
-                            <img src="img/expand.svg" alt="expand">
-                            <a href="#" class="main-section__read-more-link">
-                                Читать далее
-                            </a>
-                        </div>
-                    </div>
-                    <div class="main-section__presentation-img">
-                        <img src="img/presentation-img.jpg" alt="presentation photo" class="main-section__img">
-                    </div>
+            <article class="resume main__resume">
+                <div class="text-content resume__text-content">
+                    <p class="text-content__paragraph">
+                        Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                    </p>
+                    <p class="text-content__paragraph text-content--mobile-hidden">
+                        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="text-content--tablet-hidden">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span>
+                    </p>
+                    <a href="#" class="text-content__read-more read-more link-reset">
+                        Читать далее
+                    </a>
                 </div>
+                <img src="img/presentation-img.jpg" alt="presentation photo" class="image">
             </article>
-        </div>
-    </main>
-</body>
+        </main>
+    </div>
+    </body>
 </html>
