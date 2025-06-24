@@ -200,7 +200,7 @@ body {
     line-height: 20px;
 }
 
-.text-content--mobile-hidden {
+.text-content__paragraph--mobile-hidden {
     display: none;
 }
 
@@ -251,12 +251,12 @@ body {
         display: inherit;
     }
 
-    .text-content--mobile-hidden {
+    .text-content__paragraph--mobile-hidden {
         display: inherit;
         margin-top: 1em;
     }
 
-    .text-content--tablet-hidden {
+    .text-content__paragraph--tablet-hidden {
         display: none;
     }
 
@@ -322,5 +322,13 @@ body {
         overflow-x: inherit;
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .text-content__paragraph--mobile-hidden {
+        display: inherit;
+    }
+
+    .text-content__paragraph--tablet-hidden {
+        display: inherit;
     }
 }
