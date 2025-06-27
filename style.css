@@ -48,6 +48,7 @@ body {
     justify-content: space-between;
     width: 320px;
     height: 100vh;
+    overflow-y: auto;
     background-color: white;
     box-shadow: 10px 10px 50px 0 gray;
     position: fixed;
@@ -107,6 +108,7 @@ body {
     gap: 16px;
     justify-content: space-around;
     margin-left: 24px;
+    margin-top: 24px;
 }
 
 .email {
