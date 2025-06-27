@@ -124,12 +124,12 @@ body {
     transition: color 0.3s;
 }
 
-.footer__language {
+.sidebar__language {
     display: flex;
     gap: 8px;
 }
 
-.footer__language-link {
+.sidebar__language-link {
     font-size: 16px;
     font-weight: 500;
     font-style: normal;
@@ -140,7 +140,7 @@ body {
 .email:hover,
 .tel:hover,
 .vert-navigation__link:hover,
-.footer__language-link:hover {
+.sidebar__language-link:hover {
     color: #7E7E82;
 }
 
