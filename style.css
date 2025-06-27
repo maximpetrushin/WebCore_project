@@ -86,7 +86,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     height: 32px;
-    padding-left: 16px;
+    padding-left: 24px;
     transition: color 0.3s;
 }
 
@@ -97,7 +97,7 @@ body {
     width: 4px;
     height: 32px;
     background-image: url("img/highlight.svg ");
-    background-repeat: space;
+    object-fit: contain;
     left: 0;
 }
 
