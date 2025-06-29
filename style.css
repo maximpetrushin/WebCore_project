@@ -145,8 +145,8 @@ body {
     transition: color 0.3s;
 }
 
-.email:hover,
-.tel:hover,
+.contacts__email:hover,
+.contacts__tel:hover,
 .page-nav__link:hover,
 .language-switcher__link:hover {
     color: #7E7E82;
