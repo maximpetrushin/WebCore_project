@@ -65,7 +65,7 @@ body {
     padding: 0 24px;
 }
 
-.sidebar__navigation {
+.sidebar__page-nav {
     margin-top: 40px;
     margin-bottom: auto;
 }
@@ -117,7 +117,7 @@ body {
     gap: 12px;
 }
 
-.email {
+.contacts__email {
     font-size: 16px;
     font-weight: 500;
     font-style: normal;
@@ -125,19 +125,19 @@ body {
     transition: color 0.3s;
 }
 
-.tel {
+.contacts__tel {
     font-size: 24px;
     font-weight: bold;
     font-style: normal;
     transition: color 0.3s;
 }
 
-.sidebar__language {
+.language-switcher {
     display: flex;
     gap: 8px;
 }
 
-.sidebar__language-link {
+.language-switcher__link {
     font-size: 16px;
     font-weight: 500;
     font-style: normal;
@@ -148,7 +148,7 @@ body {
 .email:hover,
 .tel:hover,
 .page-nav__link:hover,
-.sidebar__language-link:hover {
+.language-switcher__link:hover {
     color: #7E7E82;
 }
 
