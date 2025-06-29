@@ -98,7 +98,7 @@ body {
     width: 4px;
     height: 32px;
     background-image: url("img/highlight.svg ");
-    object-fit: contain;
+    background-repeat: round;
     left: 0;
 }
 
