@@ -10,14 +10,15 @@
     <meta name="author" content="Петрушин Максим">
     <title>CPS главная страница</title>
     <link rel="icon" href="img/main-logo.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="fonts/TTLakes/stylesheet.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
-    <div class="blur-overlay"></div>
-    <!--начало макета 2.1-->
-    <aside class="sidebar">
+    <div class="blur-overlay blur-overlay--hidden"></div>
+    <!--   начало макета 2.1-->
+    <aside class="sidebar sidebar--hidden">
         <header class="sidebar__header">
             <button class="button button--cancel"></button>
             <img src="img/main-logo.svg" alt="" class="sidebar__logo logo">
@@ -91,38 +92,37 @@
         </footer>
     </aside>
     <!--конец макета 2.1-->
-
-    <aside class="header">
-        <div class="menu">
-            <button class="button button--burger"></button>
-            <img src="img/divider.svg" alt="" class="divider menu__divider">
-            <img src="img/main-logo.svg" alt="logo" class="logo menu__logo">
-            <ul class="user-active list-reset menu__user-active">
-                <li class="user-active__item">
-                    <button class="button button--call"></button>
-                </li>
-                <li class="user-active__item">
-                    <button class="button button--chat"></button>
-                </li>
-                <li class="user-active__item">
-                    <button class="button button--profile"></button>
-                </li>
-            </ul>
-            <img src="img/divider.svg" alt="" class="divider">
-            <ul class="repair-active list-reset">
-                <li class="repair-active__item">
-                    <p class="button__description">Оставить заявку</p>
-                    <button class="button button--repair"></button>
-                </li>
-                <li class="repair-active__item">
-                    <p class="button__description">Статус ремонта</p>
-                    <button class="button button--check-status"></button>
-                </li>
-            </ul>
-        </div>
-        <h1 class="title header__title">Услуги и сервисы</h1>
-    </aside>
     <main class="main">
+        <aside class="header">
+            <div class="menu">
+                <button class="button button--burger"></button>
+                <img src="img/divider.svg" alt="" class="divider menu__divider">
+                <img src="img/main-logo.svg" alt="logo" class="logo menu__logo">
+                <ul class="user-active list-reset menu__user-active">
+                    <li class="user-active__item">
+                        <button class="button button--call"></button>
+                    </li>
+                    <li class="user-active__item">
+                        <button class="button button--chat"></button>
+                    </li>
+                    <li class="user-active__item">
+                        <button class="button button--profile"></button>
+                    </li>
+                </ul>
+                <img src="img/divider.svg" alt="" class="divider">
+                <ul class="repair-active list-reset">
+                    <li class="repair-active__item">
+                        <p class="button__description">Оставить заявку</p>
+                        <button class="button button--repair"></button>
+                    </li>
+                    <li class="repair-active__item">
+                        <p class="button__description">Статус ремонта</p>
+                        <button class="button button--check-status"></button>
+                    </li>
+                </ul>
+            </div>
+            <h1 class="title header__title">Услуги и сервисы</h1>
+        </aside>
         <nav class="navigation main__navigation">
             <ul class="navigation__list list-reset">
                 <li class="navigation__item">
@@ -165,13 +165,108 @@
                 <p class="text-content__paragraph text-content__paragraph--mobile-hidden">
                     Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="text-content__paragraph text-content__paragraph--tablet-hidden">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span>
                 </p>
-                <a href="#" class="text-content__read-more read-more link-reset">
+                <a href="#" class="text-content__read-more read-more link-reset" id="readMoreFirst">
                     Читать далее
                 </a>
             </div>
             <img src="img/presentation-img.jpg" alt="presentation photo" class="image">
         </article>
+        <section class="card-section">
+            <header class="topper card-section__topper">
+                <h2 class="subtitle">Ремонт техники различных брендов</h2>
+            </header>
+            <div class="swiper card-section__swiper">
+                <div class="card-list card-section__card-list swiper-wrapper card-list--hidden">
+                    <div class="card-list__item card-list__item--lenovo swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--samsung swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap-2.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--apple swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap-3.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--viewsonic swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap-4.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--bosch swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap-5.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--hp swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap-6.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--aser swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap-7.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--sony swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap-8.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--lenovo swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--samsung swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap-2.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--apple swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap-3.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--viewsonic swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap-4.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--bosch swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap-5.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--hp swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap-6.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--aser swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap-7.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                    <div class="card-list__item card-list__item--sony swiper-slide">
+                        <img class="card-list__brand-logo brand-logo" src="img/Bitmap-8.svg" alt="Lenovo">
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <a href="#" class="card-list__read-more read-more link-reset" id="readMoreSecond">
+                Показать все
+            </a>
+        </section>
     </main>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
