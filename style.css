@@ -375,6 +375,8 @@ body {
     margin-right: 8px;
 }
 
+/*поворот иконки у кнопки читать далее*/
+
 .read-more.active::before {
     transform: rotate(180deg);
 }
@@ -391,6 +393,8 @@ body {
 .image {
     max-width: 100%;
 }
+
+/*начало стилей для макета 2.2*/
 
 .topper {
     display: flex;
@@ -513,6 +517,8 @@ body {
     .resume__text-content {
         margin: 0;
     }
+
+    /*начало стилей для макета 2.2*/
 
     .swiper-pagination {
         display: none;
