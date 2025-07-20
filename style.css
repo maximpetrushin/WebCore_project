@@ -37,7 +37,7 @@ body {
     width: 100%;
     height: 100%;
     backdrop-filter: blur(8px);
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     z-index: 10;
     /*display: none; */
 }
@@ -50,7 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 320px;
+    width: 100vw;
     height: 100vh;
     overflow-y: auto;
     background-color: white;
@@ -156,7 +156,8 @@ body {
 .contacts__email:hover,
 .contacts__tel:hover,
 .page-nav__link:hover,
-.language-switcher__link:hover {
+.language-switcher__link:hover,
+.commercial-offer__link:hover {
     color: #7E7E82;
 }
 
@@ -452,6 +453,10 @@ body {
     margin-left: 16px;
 }
 
+.main__card-section {
+    margin-top: 32px;
+}
+
 
 .swiper::after {
     content: "";
@@ -485,7 +490,106 @@ body {
     display: none;
 }
 
+.card-list__item--repair {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 16px;
+    width: 240px;
+    height: 160px;
+}
+
+.card-list__repair-link {
+    align-self: flex-start;
+}
+
+.card-list__item--price {
+    width: 260px;
+    height: 200px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.description__swapper {
+    position: relative;
+}
+
+.description__title {
+    font-size: 14px;
+    color: #7E7E82;
+}
+
+.description__definition {
+    font-size: 14px;
+}
+
+.button--order {
+    position: absolute;
+    justify-content: space-between;
+    bottom: 16px;
+    right: 16px;
+    height: 32px;
+    width: 120px;
+    padding: 0 12px;
+    border-radius: 16px;
+    font-family: "TT Lakes", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.commercial-offer__text-content {
+    margin: 16px;
+}
+
+.commercial-offer__link {
+    display: inline-block;
+    margin-top: 16px;
+    font-family: "TT Lakes", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.commercial-offer__link::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+    height: 12px;
+    background-image: url("img/dropdown.svg");
+    background-repeat: no-repeat;
+    margin-left: 8px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid #D9FFF5;
+    font-size: 14px;
+    color: #7E7E82;
+    text-align: center;
+}
+
+.main__footer {
+    padding: 16px;
+}
+
+
 @media (min-width: 768px) {
+
+    .sidebar {
+        width: 320px;
+    }
 
     .menu__user-active {
         display: inherit;
@@ -553,7 +657,7 @@ body {
 
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 1440px) {
 
     .button--burger {
         display: none;

@@ -83,3 +83,17 @@ readMoreSecond.addEventListener('click', function (evt) {
 
     }
 })
+
+let buttonsOrder = document.querySelectorAll('.button--order');
+for (let i = 0; i < buttonsOrder.length; i++) {
+
+    let buttonOrderText = document.createElement('span');
+    buttonOrderText.textContent = 'заказать';
+    buttonsOrder[i].appendChild(buttonOrderText);
+
+    let buttonOrderArrow = document.createElement('img');
+    buttonOrderArrow.src = 'img/dropdown2.svg';
+    buttonsOrder[i].appendChild(buttonOrderArrow);
+
+
+}
