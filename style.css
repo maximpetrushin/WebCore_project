@@ -1,6 +1,6 @@
 body {
     font-family: 'TT Lakes', sans-serif;
-    background-color: #F8F8F8;
+    height: 100%;
 }
 
 * {
@@ -9,9 +9,32 @@ body {
     box-sizing: border-box;
 }
 
+table {
+    border-collapse: collapse; /* Убираем двойные границы */
+    border-spacing: 0;         /* Убираем расстояние между ячейками */
+    width: 100%;               /* Таблица на всю ширину (по желанию) */
+}
+
+th, td {
+    padding: 0;                /* Убираем внутренние отступы */
+    margin: 0;                 /* Убираем внешние отступы */
+    border: none;              /* Убираем стандартную границу */
+    text-align: left;          /* Выравнивание текста по левому краю */
+    font-weight: normal;       /* Сбрасываем жирность для th */
+}
+
+caption {
+    caption-side: top;         /* Заголовок таблицы сверху */
+    text-align: left;          /* Выравнивание заголовка */
+    padding: 0;
+    margin: 0;
+}
+
+
 .container {
     min-width: 320px;
     max-width: 1440px;
+    background-color: #F8F8F8;
     margin: 0 auto;
     padding: 0;
     height: 100%;
@@ -163,6 +186,71 @@ body {
 
 /*конец стилей для макета 2.1*/
 
+.sidebar-callback {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: white;
+    box-shadow: 10px 10px 50px 0 gray;
+    position: fixed;
+    z-index: 11;
+    gap: 16px;
+}
+
+.sidebar-callback--hidden{
+    display: none;
+}
+
+.feedback--hidden {
+    display: none;
+}
+
+.sidebar-callback__container {
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sidebar-callback__title {
+    margin-left: -16px;
+}
+
+.callback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.callback-form__input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    outline: none;
+    color: #B5B6BC;
+    font-family: "TT Lakes", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    resize: none;
+}
+
+.callback-form__input:focus {
+    border-color: #D9FFF5;
+    box-shadow: 0 0 2px 2px #D9FFF5;
+}
+
+.sidebar-callback__link {
+    color: #FF3E79;
+    cursor: pointer;
+}
+
+.sidebar-callback__button--submit {
+    align-self: flex-end;
+}
+
+
 .menu {
     display: flex;
     gap: 20px;
@@ -244,7 +332,7 @@ body {
     background-position: center center;
 }
 
-.button--chat {
+.button--feedback {
     background-image: url("img/chat.svg");
     background-repeat: no-repeat;
     background-position: center center;
@@ -266,6 +354,21 @@ body {
     background-image: url("img/check-status.svg");
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.button--submit {
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+    width: 120px;
+    padding: 0 12px;
+    border-radius: 16px;
+    font-family: "TT Lakes", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
 }
 
 .button:hover {
@@ -348,6 +451,10 @@ body {
     line-height: 20px;
 }
 
+.text-content__paragraph--hidden {
+    display: none;
+}
+
 .text-content__paragraph--mobile-hidden {
     display: none;
 }
@@ -397,7 +504,8 @@ body {
 
 /*начало стилей для макета 2.2*/
 
-.topper {
+
+.subtitle {
     display: flex;
     align-items: center;
     padding: 16px;
@@ -405,9 +513,6 @@ body {
     min-height: 56px;
     border-top: 1px solid #D9FFF5;
     background-image: linear-gradient(to right, #F8F8F8 0%, #FFFFFF 100%);
-}
-
-.subtitle {
     font-family: "TT Lakes", sans-serif;
     font-size: 16px;
     font-weight: normal;
@@ -545,6 +650,10 @@ body {
     font-style: normal;
 }
 
+.main__table-section--hidden {
+    display: none;
+}
+
 .commercial-offer__text-content {
     margin: 16px;
 }
@@ -589,6 +698,18 @@ body {
 
     .sidebar {
         width: 320px;
+    }
+
+    .sidebar-callback {
+        right: 0;
+        width: 440px;
+        border-left: 1px solid #B8FFEC;
+        overflow: visible;
+    }
+
+    .sidebar-callback__button {
+        position: absolute;
+        left: -72px;
     }
 
     .menu__user-active {
@@ -643,7 +764,7 @@ body {
     }
 
     .card-list--hidden {
-        max-height: calc(72px * 2 + 20px);
+        max-height: 170px;
         overflow: hidden;
     }
 
@@ -654,10 +775,88 @@ body {
         margin-bottom: 32px;
     }
 
+    .card-section--hidden {
+        display: none;
+    }
 
+    .table-price__button {
+        position: static;
+        display: inline-flex;
+    }
+
+    .main__table-section {
+        display: flex;
+        margin: 24px;
+    }
+
+    .table-price {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+
+
+    }
+    .table-price__table-header {
+        width: 100%;
+        color: #7E7E82;
+        font-family: "TT Lakes", sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .table-price__table-body {
+        background-color: #ffffff;
+        border-radius: 16px;
+    }
+
+    .table-price__table-row {
+        position: relative;
+        display: table-row;
+        height: 64px;
+    }
+
+    .table-price__table-cell {
+        padding: 16px;
+    }
+
+    .table-price__button-cell {
+        text-align: right;
+        padding: 16px;
+    }
+
+    .table-price__table-row:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        width: 90%;
+        border-bottom: 1px solid #EAEAEA;
+    }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1366px) {
+
+    .main {
+        margin-left: 300px;
+    }
+
+    .sidebar {
+        position: fixed;
+        min-height: 100%;
+        box-shadow: none;
+        z-index: 1;
+    }
+
+    .sidebar--hidden {
+        display: flex;
+        width: 300px;
+    }
+
+    .button--hidden {
+        display: none;
+    }
+
 
     .button--burger {
         display: none;

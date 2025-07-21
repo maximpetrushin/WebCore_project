@@ -20,7 +20,7 @@
     <!--   начало макета 2.1-->
     <aside class="sidebar sidebar--hidden">
         <header class="sidebar__header">
-            <button class="button button--cancel"></button>
+            <button class="button button--cancel button--hidden"></button>
             <img src="img/main-logo.svg" alt="" class="sidebar__logo logo">
             <button class="button button--search"></button>
         </header>
@@ -74,7 +74,7 @@
                     <button class="button button--call"></button>
                 </li>
                 <li class="user-active__item">
-                    <button class="button button--chat"></button>
+                    <button class="button button--feedback"></button>
                 </li>
                 <li class="user-active__item">
                     <button class="button button--profile"></button>
@@ -92,6 +92,33 @@
         </footer>
     </aside>
     <!--конец макета 2.1-->
+    <aside class="sidebar-callback sidebar-callback--hidden">
+        <div class="sidebar-callback__container">
+            <button class="sidebar-callback__button button button--cancel"></button>
+            <h2 class="sidebar-callback__title title">Заказать звонок</h2>
+            <form class="callback-form" action="#">
+                <input class="callback-form__input input" type="tel" placeholder="Телефон" maxlength="13">
+            </form>
+            <p class="sidebar-callback__text-content">Нажимая “отправить”, вы даете согласие на <a class="sidebar-callback__link link-reset" href="#">обработку персональных данных</a> и соглашаетесь с нашей
+                <a class="sidebar-callback__link link-reset" href="#">политикой конфиденциальности</a></p>
+            <button class="sidebar-callback__button--submit button button--submit"></button>
+        </div>
+    </aside>
+    <aside class="feedback feedback--hidden sidebar-callback ">
+        <div class="sidebar-callback__container">
+            <button class="sidebar-callback__button button button--cancel"></button>
+            <h2 class="sidebar-callback__title title">Обратная связь</h2>
+            <form class="callback-form" action="#">
+                <input class="callback-form__input input" name="name" type="text" placeholder="Имя">
+                <input class="callback-form__input input" name="phone" type="tel" placeholder="Телефон">
+                <input class="callback-form__input input" name="email" type="email" placeholder="Электронная почта">
+                <textarea class="callback-form__input input"  name="message" placeholder="Сообщение" rows="5"></textarea>
+            </form>
+            <p class="sidebar-callback__text-content">Нажимая “отправить”, вы даете согласие на <a class="sidebar-callback__link link-reset" href="#">обработку персональных данных</a> и соглашаетесь с нашей
+                <a class="sidebar-callback__link link-reset" href="#">политикой конфиденциальности</a></p>
+            <button class="sidebar-callback__button--submit button button--submit"></button>
+        </div>
+    </aside>
     <main class="main">
         <aside class="header">
             <div class="menu">
@@ -103,7 +130,7 @@
                         <button class="button button--call"></button>
                     </li>
                     <li class="user-active__item">
-                        <button class="button button--chat"></button>
+                        <button class="button button--feedback"></button>
                     </li>
                     <li class="user-active__item">
                         <button class="button button--profile"></button>
@@ -165,7 +192,7 @@
                 <p class="text-content__paragraph text-content__paragraph--mobile-hidden">
                     Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="text-content__paragraph text-content__paragraph--tablet-hidden">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span>
                 </p>
-                <p class="text-content__read-more-text text-content__read-more-text--hidden">
+                <p class="text-content__paragraph text-content__paragraph--hidden">
                     Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br>
                     Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
                 </p>
@@ -178,10 +205,8 @@
 
         <!--блок со свайпером-->
 
-        <section class="card-section main__card-section">
-            <header class="topper">
-                <h2 class="subtitle">Ремонт техники различных брендов</h2>
-            </header>
+        <section class="card-section card-section--brand main__card-section">
+            <h2 class="subtitle">Ремонт техники различных брендов</h2>
             <div class="swiper card-section__swiper">
                 <ul class="card-list card-section__card-list swiper-wrapper card-list--hidden">
                     <li class="card-list__item card-list__item--lenovo swiper-slide">
@@ -271,10 +296,8 @@
                 Показать все
             </a>
         </section>
-        <section class="card-section main__card-section">
-            <header class="topper">
-                <h2 class="subtitle">Ремонт различных видов техники</h2>
-            </header>
+        <section class="card-section card-section--repair main__card-section">
+            <h2 class="subtitle">Ремонт различных видов техники</h2>
             <div class="swiper card-section__swiper">
                 <ul class="card-list card-section__card-list swiper-wrapper card-list--hidden">
                     <li class="card-list__item card-list__item--repair swiper-slide">
@@ -302,6 +325,26 @@
                         <button class="brand-button button button--rev">
                         </button>
                     </li>
+                    <li class="card-list__item card-list__item--repair swiper-slide">
+                        <a href="#" class="card-list__repair-link link-reset">Ремонт ноутбуков</a>
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </li>
+                    <li class="card-list__item card-list__item--repair swiper-slide">
+                        <a href="#" class="card-list__repair-link link-reset">Ремонт планшетов</a>
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </li>
+                    <li class="card-list__item card-list__item--repair swiper-slide">
+                        <a href="#" class="card-list__repair-link link-reset">Ремонт ПК</a>
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </li>
+                    <li class="card-list__item card-list__item--repair swiper-slide">
+                        <a href="#" class="card-list__repair-link link-reset">Ремонт  мониторов</a>
+                        <button class="brand-button button button--rev">
+                        </button>
+                    </li>
                 </ul>
                 <div class="swiper-pagination"></div>
             </div>
@@ -310,9 +353,7 @@
             </a>
         </section>
         <section class="card-section main__card-section">
-            <header class="topper">
-                <h2 class="subtitle">Ремонт различных видов техники</h2>
-            </header>
+            <h2 class="subtitle">Цены на услуги</h2>
             <div class="swiper card-section__swiper card-section--hidden">
                 <ul class="card-list card-section__card-list swiper-wrapper">
                     <li class="card-list__item card-list__item--price swiper-slide">
@@ -329,9 +370,9 @@
                                 <dt class="description__title">Срок</dt>
                                 <dd class="description__definition">30-120 мин</dd>
                             </div>
-                            <button class="button button--order">
-                            </button>
                         </dl>
+                        <button class="button button--order">
+                        </button>
                     </li>
                     <li class="card-list__item card-list__item--price swiper-slide">
                         <dl class="description">
@@ -347,9 +388,9 @@
                                 <dt class="description__title">Срок</dt>
                                 <dd class="description__definition">30 мин</dd>
                             </div>
-                            <button class="button button--order">
-                            </button>
                         </dl>
+                        <button class="button button--order">
+                        </button>
                     </li>
                     <li class="card-list__item card-list__item--price swiper-slide">
                         <dl class="description">
@@ -365,9 +406,9 @@
                                 <dt class="description__title">Срок</dt>
                                 <dd class="description__definition">30-120 мин</dd>
                             </div>
-                            <button class="button button--order">
-                            </button>
                         </dl>
+                        <button class="button button--order">
+                        </button>
                     </li>
                     <li class="card-list__item card-list__item--price swiper-slide">
                         <dl class="description">
@@ -383,9 +424,9 @@
                                 <dt class="description__title">Срок</dt>
                                 <dd class="description__definition">30-120 мин</dd>
                             </div>
-                            <button class="button button--order">
-                            </button>
                         </dl>
+                        <button class="button button--order">
+                        </button>
                     </li>
                     <li class="card-list__item card-list__item--price swiper-slide">
                         <dl class="description">
@@ -401,14 +442,68 @@
                                 <dt class="description__title">Срок</dt>
                                 <dd class="description__definition">30-120 мин</dd>
                             </div>
-                            <button class="button button--order">
-                            </button>
                         </dl>
+                        <button class="button button--order">
+                        </button>
                     </li>
                 </ul>
                 <div class="swiper-pagination"></div>
             </div>
         </section>
+        <div class="main__table-section main__table-section--hidden">
+            <table class="table-price">
+                <thead class="table-price__table-header">
+                    <tr class="table-price__table-row">
+                        <th class="table-price__table-cell">Ремонтные услуги</th>
+                        <th class="table-price__table-cell">Цена</th>
+                        <th class="table-price__table-cell">Срок</th>
+                        <th class="table-price__table-cell"></th>
+                    </tr>
+                </thead>
+                <tbody class="table-price__table-body">
+                <tr class="table-price__table-row">
+                    <td class="table-price__table-cell">Диагностика</td>
+                    <td class="table-price__table-cell">Бесплатно</td>
+                    <td class="table-price__table-cell">30 мин</td>
+                    <td class="table-price__button-cell">
+                        <button class="table-price__button button button--order"></button>
+                    </td>
+                </tr>
+                <tr class="table-price__table-row">
+                    <td class="table-price__table-cell">Замена дисплея</td>
+                    <td class="table-price__table-cell">1 000 &#8381;</td>
+                    <td class="table-price__table-cell">30-120 мин</td>
+                    <td class="table-price__button-cell">
+                        <button class="table-price__button button button--order"></button>
+                    </td>
+                </tr>
+                <tr class="table-price__table-row">
+                    <td class="table-price__table-cell">Замена полифонического динамика</td>
+                    <td class="table-price__table-cell">1 000 &#8381;</td>
+                    <td class="table-price__table-cell">30-120 мин</td>
+                    <td class="table-price__button-cell">
+                        <button class="table-price__button button button--order"></button>
+                    </td>
+                </tr>
+                <tr class="table-price__table-row">
+                    <td class="table-price__table-cell">Тестирование с выдачей технического заключения</td>
+                    <td class="table-price__table-cell">1 000 &#8381;</td>
+                    <td class="table-price__table-cell">30-120 мин</td>
+                    <td class="table-price__button-cell">
+                        <button class="table-price__button button button--order"></button>
+                    </td>
+                </tr>
+                <tr class="table-price__table-row">
+                    <td class="table-price__table-cell">Замена программного обеспечения</td>
+                    <td class="table-price__table-cell">1 000 &#8381;</td>
+                    <td class="table-price__table-cell">30-120 мин</td>
+                    <td class="table-price__button-cell">
+                        <button class="table-price__button button button--order"></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
         <section>
             <div class="commercial-offer">
                 <div class="commercial-offer__text-content text-content">
